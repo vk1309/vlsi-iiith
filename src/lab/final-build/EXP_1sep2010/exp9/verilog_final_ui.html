@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> VERILOG EXPERIMENT </title>
+<style>
+h1
+{
+	text-align:center;
+	text-decoration: dashed;
+	color: black;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+}
+.p1{
+	color:red;
+	text-decoration:bold;
+	font-size:20px; 
+	text-decoration: underline;
+	float:left;
+
+}
+
+.p2{
+	color:red;
+	text-decoration:bold;
+	font-size:20px; 
+	text-decoration: underline;
+	float:center;
+	text-align:center;
+
+}
+
+.p3{
+	color:black;
+	text-decoration:bold;
+	font-size:20px; 
+	border-color:black;
+	border-style:solid;
+	border-width:2px;
+	border-radius:2px;
+	float:left;
+	padding:20px;
+	margin-right:400px;
+}
+.mytext
+{
+	width:300px;
+	height:500px;
+	float:center;
+}
+
+a:link {
+  color: blue;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: hotpink;
+}
+
+a:active {
+  color: red;
+}
+
+p
+{
+color:blue;
+text-decoration-style:underline;
+}
+
+</style>
+<script>
+	<script type="text/javascript">
+	function click()
+	{
+		var str=document.getElementById("text1").value;
+		alert(str);
+	}
+
+</script>
+</head>
+<body>
+	<h1> EXPERIMENT: VERILOG CODE </h1>
+	<br>
+	<p class="p1"> CODES FOR REFERENCE </p>
+	<p class="p2"> VERILOG CODE </p>
+
+	<!--<p class="p3"> TESTBENCH CODE </p>-->
+	<p class="p3"> <bold>OR Gate Verilog Code :</bold><br><br>
+module orgate (a, b, y);input a, b;<br>
+output y;<br>
+assign y = a | b;<br>
+endmodule<br>
+
+<p class="p3">
+<bold>OR Gate Testbench Code:</bold><br><br>
+module orgate_tb;<br>
+wire t_y;<br>
+reg t_a, t_b;<br>
+orgate my_gate( .a(t_a), .b(t_b), .y(t_y) );<br>
+initial<br>
+begin<br>
+$monitor(t_a, t_b, t_y);<br>
+t_a = 1'b0;<br>
+t_b = 0'b0;<br>
+#5 t_a = 1'b0; t_b = 1'b1;<br>
+#5 t_a = 1'b1; t_b = 1'b0;<br>
+#5 t_a = 1'b1; t_b = 1'b1;<br>
+end<br>
+endmodule<br>
+</p>
+<textarea rows = "20" cols = "60">
+         </textarea><br><br>
+         <input type = "submit" value = "SUBMIT" />
+<br>
+<br>
+<div id="button"><a href="C:\Users\MAHE\Desktop\t_pst.html">CLICK HERE FOR POSITIVE EDGE TRIGGERED GRAPH</a></div>
+<br>
+<div id="button"><a href="C:\Users\MAHE\Desktop\t_neg.html">CLICK HERE FOR NEGATIVE EDGE TRIGGERED GRAPH</a></div>
+<br>
+
+<p> CLICK BELOW TO DOWNLOAD THE WAVEFORM </p>
+
+<a href="C:\Users\MAHE\Desktop\post.png" download="positive edge triggered">
+  <img src="C:\Users\MAHE\Desktop\post.png" alt="pt" width="104" height="142">
+</a>
+</body>
+</html>
