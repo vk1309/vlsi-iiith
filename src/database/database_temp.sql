@@ -31,6 +31,7 @@ CREATE TABLE `content` (
   `title` varchar(100) NOT NULL,
   `author` varchar(50) NOT NULL,
   `posttext` text NOT NULL,
+  `posttext2` text NOT NULL,
   `date` varchar(20) NOT NULL,
   PRIMARY KEY (`srno`)
 ) ENGINE=MyISAM AUTO_INCREMENT=1140 DEFAULT CHARSET=latin1;
